@@ -18,7 +18,7 @@
   ],
   "rules": {
     "no-plusplus": "off",
-    "no-console": "warn",
+    "no-console": "off", //warn
     "max-len": [
       "warn",
       {
