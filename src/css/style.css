@@ -109,15 +109,26 @@ button:active {
   gap: 1rem;
 }
 
+.cars {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 
 h1,
 h2 {
   margin: 0 auto;
 }
 
-h3,
+
+.engine,
+.car-head {
+  padding: 0 1rem;
+}
+
 .engine {
-  padding: 0 1%;
+  display: flex;
+  gap: 1rem
 }
 
 .main-container {

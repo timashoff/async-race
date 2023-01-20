@@ -1,10 +1,15 @@
 import './css/style.css';
 import { getCars } from './api/api';
+import { Cars } from './utils/types';
+import { createCars } from './utils/create-cars';
 
 
 
 const garagePage = document.getElementById('garage');
 const winnersPage = document.getElementById('winners');
+const generateBtn = document.querySelector('.generate-cars');
+
+const cars = document.querySelector('.cars');
 
 function handleWinnersBtn() {
   if (!garagePage || !winnersPage) return;
@@ -31,9 +36,8 @@ if (toGarageBtn) {
 
 
 
-window.addEventListener('load', async () => {
-  const cars = await getCars();
-  console.log(cars);
+generateBtn?.addEventListener('click', async () => {
+  const dataCars = await getCars();
+  dataCars.forEach((car: Cars) => cars?.append(createCars(car)));
 });
-
 
