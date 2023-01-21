@@ -1,7 +1,7 @@
-import { Cars } from './types';
-import { createCarSVG } from './create-svg';
-import { createBtn } from './create-buttons';
-import { createDiv } from './create-divs';
+import { Cars } from '../utils/types';
+import { createCarSVG } from '../utils/create-svg';
+import { createBtn } from '../utils/create-buttons';
+import { createDiv } from '../utils/create-divs';
 
 export const createCars = (obj: Cars) => {
   const { name, color, id } = obj;
