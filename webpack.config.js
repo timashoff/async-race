@@ -25,7 +25,7 @@ const htmlLoader = {
 const cssLoader = {
   test: /\.(sa|sc|c)ss$/i,
   // use: ['css-loader'],
-  use: [mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader',]
+  use: [mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader']
 };
 
 const fontLoader = {

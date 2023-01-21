@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+}
+
+#garage,
+#winners {
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.car-head,
+.car-main {
+  display: flex;
+  gap: 1rem;
+}
