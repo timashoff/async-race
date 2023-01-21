@@ -1,5 +1,5 @@
 import './css/style.css';
-
+import { getCars } from './api';
 
 
 
@@ -30,5 +30,10 @@ if (toGarageBtn) {
 }
 
 
+
+window.addEventListener('load', async () => {
+  const cars = await getCars();
+  console.log(cars);
+});
 
 
