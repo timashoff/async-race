@@ -3,6 +3,7 @@ import { getCars } from './api/api';
 import { Cars } from './utils/types';
 import { createCars } from './view/create-cars';
 import { createHeader } from './view/header';
+import { createFooter } from './view/footer';
 
 
 
@@ -49,6 +50,7 @@ resetBtn?.addEventListener('click', () => {
 function App() {
   const body = document.body;
   body.prepend(createHeader());
+  body.append(createFooter());
 }
 
 window.addEventListener('DOMContentLoaded', App);
