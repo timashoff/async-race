@@ -4,6 +4,8 @@ import { Cars } from './utils/types';
 import { createCars } from './view/create-cars';
 import { createHeader } from './view/header';
 import { createFooter } from './view/footer';
+// import { createDiv } from './utils/create-divs';
+import { createMenu } from './view/menu';
 
 
 
@@ -49,7 +51,13 @@ resetBtn?.addEventListener('click', () => {
 
 function App() {
   const body = document.body;
-  body.prepend(createHeader());
+  const main = document.createElement('main');
+  const garage = document.createElement('div');
+  garage.id = 'garage';
+  main.append(garage);
+  garage.append(createMenu());
+
+  body.prepend(createHeader(), main);
   body.append(createFooter());
 }
 

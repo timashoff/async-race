@@ -36,17 +36,20 @@ input[type='text'] {
   max-width: 10rem;
 }
 
-.field {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
+.create-car,
+.update-car,
 .controls {
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+/* .controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+} */
 
 button,
 input {
@@ -61,6 +64,8 @@ button {
   padding: 0.25rem;
   transition: all 0.2s;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .btn {
@@ -103,6 +108,14 @@ button:active {
   transform: scale(0.95);
   transition: all 0.2s;
 }
+
+button:disabled {
+  color: grey;
+  border-color: grey;
+  cursor: default;
+  transform: scale(1);
+}
+
 
 .active {
   cursor: default;
@@ -166,4 +179,6 @@ nav {
 
 a {
   color: antiquewhite;
+  user-select: none;
+  -webkit-user-select: none;
 }
