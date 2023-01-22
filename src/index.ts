@@ -1,39 +1,40 @@
 import './css/style.css';
 import { getCars } from './api/api';
 import { Cars } from './utils/types';
-import { createCars } from './ui/create-cars';
+import { createCars } from './view/create-cars';
+import { createHeader } from './view/header';
 
 
 
-const garagePage = document.getElementById('garage');
-const winnersPage = document.getElementById('winners');
+// const garagePage = document.getElementById('garage');
+// const winnersPage = document.getElementById('winners');
 const cars = document.querySelector('.cars');
 
 //buttons
 const generateBtn = document.querySelector('.generate-cars');
-const toWinersBtn = document.querySelector('.to-winners');
-const toGarageBtn = document.querySelector('.to-garage');
+// const toWinersBtn = document.querySelector('.to-winners');
+// const toGarageBtn = document.querySelector('.to-garage');
 const resetBtn = document.querySelector('.reset');
 
 //handlers
-function handleWinnersBtn() {
-  if (!garagePage || !winnersPage) return;
-  garagePage.style.display = 'none';
-  winnersPage.style.display = 'flex';
-}
+// function handleWinnersBtn() {
+//   if (!garagePage || !winnersPage) return;
+//   garagePage.style.display = 'none';
+//   winnersPage.style.display = 'flex';
+// }
 
-function handleGarageBtn() {
-  if (!garagePage || !winnersPage) return;
-  garagePage.style.display = 'flex';
-  winnersPage.style.display = 'none';
-}
+// function handleGarageBtn() {
+//   if (!garagePage || !winnersPage) return;
+//   garagePage.style.display = 'flex';
+//   winnersPage.style.display = 'none';
+// }
 
 
 
 
 //listiners
-if (toWinersBtn) toWinersBtn.addEventListener('click', handleWinnersBtn);
-if (toGarageBtn) toGarageBtn.addEventListener('click', handleGarageBtn);
+// if (toWinersBtn) toWinersBtn.addEventListener('click', handleWinnersBtn);
+// if (toGarageBtn) toGarageBtn.addEventListener('click', handleGarageBtn);
 
 generateBtn?.addEventListener('click', async () => {
   const dataCars = await getCars();
@@ -44,3 +45,10 @@ resetBtn?.addEventListener('click', () => {
   if (cars) cars.innerHTML = '';
 });
 
+
+function App() {
+  const body = document.body;
+  body.prepend(createHeader());
+}
+
+window.addEventListener('DOMContentLoaded', App);

@@ -104,6 +104,11 @@ button:active {
   transition: all 0.2s;
 }
 
+.active {
+  cursor: default;
+  color: orchid;
+}
+
 #garage,
 #winners {
   display: flex;
