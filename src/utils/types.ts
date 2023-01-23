@@ -3,3 +3,5 @@ export type Cars = {
   id: 'number',
   color: 'string'
 };
+
+export type Title = 'garage' | 'winners';
