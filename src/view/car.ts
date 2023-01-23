@@ -1,13 +1,13 @@
-import { Cars } from '../utils/types';
+import { Car } from '../utils/types';
 import { createCarSVG } from '../utils/create-svg';
 import { createBtn } from '../utils/create-buttons';
 import { createDiv } from '../utils/create-divs';
 
-export const createCars = (obj: Cars) => {
+export const createCar = (obj: Car) => {
   const { name, color, id } = obj;
 
-  const productCar = createDiv('car');
-  productCar.id = id;
+  const car = createDiv('car');
+  car.id = id;
 
   const carHead = createDiv('car-head');
 
@@ -23,7 +23,7 @@ export const createCars = (obj: Cars) => {
 
   const removeBtn = createBtn('btn-round', 'remove');
   removeBtn.innerText = '✘';
-  removeBtn.addEventListener('click', () => productCar.remove());
+  removeBtn.addEventListener('click', () => car.remove());
 
   carHead.append(selectBtn, removeBtn, carName);
 
@@ -42,6 +42,6 @@ export const createCars = (obj: Cars) => {
   stopBtn.innerText = 'stop';
   engine.append(startBtn, stopBtn);
 
-  productCar.append(carHead, carMain, road, engine);
-  return productCar;
+  car.append(carHead, carMain, road, engine);
+  return car;
 };

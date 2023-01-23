@@ -1,7 +1,7 @@
 import './css/style.css';
-import { getCars } from './api/api';
-import { Cars } from './utils/types';
-import { createCars } from './view/create-cars';
+// import { getCars } from './api/api';
+// import { Cars } from './utils/types';
+// import { createCars } from './view/cars';
 import { createHeader } from './view/header';
 import { createFooter } from './view/footer';
 import { createGarage } from './view/garage';
@@ -12,7 +12,8 @@ import { createGarage } from './view/garage';
 const cars = document.querySelector('.cars');
 
 //buttons
-const generateBtn = document.querySelector('.generate-cars');
+// const generateBtn = document.querySelector('.generate-cars');
+
 // const toWinersBtn = document.querySelector('.to-winners');
 // const toGarageBtn = document.querySelector('.to-garage');
 const resetBtn = document.querySelector('.reset');
@@ -37,10 +38,11 @@ const resetBtn = document.querySelector('.reset');
 // if (toWinersBtn) toWinersBtn.addEventListener('click', handleWinnersBtn);
 // if (toGarageBtn) toGarageBtn.addEventListener('click', handleGarageBtn);
 
-generateBtn?.addEventListener('click', async () => {
-  const dataCars = await getCars();
-  dataCars.forEach((car: Cars) => cars?.append(createCars(car)));
-});
+// generateBtn?.addEventListener('click', async () => {
+//   console.log('generate++');
+//   const dataCars = await getCars();
+//   dataCars.forEach((car: Cars) => cars?.append(createCars(car)));
+// });
 
 resetBtn?.addEventListener('click', () => {
   if (cars) cars.innerHTML = '';

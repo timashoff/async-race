@@ -1,6 +1,7 @@
 import { createBtn } from '../utils/create-buttons';
 import { createDiv } from '../utils/create-divs';
 import { createInput } from '../utils/create-input';
+import { renderCars } from '../utils/eventListiners';
 
 export const createMenu = () => {
   const menu = createDiv('menu');
@@ -38,6 +39,7 @@ export const createMenu = () => {
   reset.disabled = true;
   const generate = createBtn('generate-cars');
   generate.textContent = 'generate cars';
+  generate.addEventListener('click', renderCars);
   controls.append(race, reset, generate);
 
   menu.append(create, update, controls);
