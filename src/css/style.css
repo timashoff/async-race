@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@import url('./table.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 320px;
+  margin: 0 auto;
+  /* margin-bottom: 1rem; */
+}
+
+input[type='text'] {
+  max-width: 10rem;
+}
+
+.create-car,
+.update-car,
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* .controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+} */
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: 1px rgba(244, 165, 96, 0.7) solid;
+  color: sandybrown;
+  border-radius: 4px;
+  padding: 0.25rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn {
+  border: 1px solid antiquewhite;
+  padding: 0.6rem 1rem;
+  border-radius: 0;
+  color: antiquewhite;
+  text-transform: uppercase;
+}
+
+.btn-round {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.btn-round.remove:hover {
+  color: red;
+  border-color: red;
+}
+
+.btn-round.select:hover {
+  color: greenyellow;
+  border-color: greenyellow;
+}
+
+.btn-engine {
+  border: none;
+}
+
+button:hover {
+  color: azure;
+  border-color: azure;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+
+button:disabled {
+  color: grey;
+  border-color: grey;
+  cursor: default;
+  transform: scale(1);
+}
+
+.prev,
+.next {
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.active {
+  cursor: default;
+  color: orchid;
+}
+
+#garage,
+#winners {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cars {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100vw;
+}
+
+h1,
+h2 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+
+.engine,
+.car-head {
+  padding: 0 1rem;
+}
+
+.engine {
+  display: flex;
+  gap: 1rem
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.car-head,
+.car-main {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.car-road {
+  border: 1px solid royalblue;
+  margin-bottom: 1rem;
+}
+
+footer,
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: rgba(250, 128, 114, 0.15);
+}
+
+a {
+  color: antiquewhite;
+  user-select: none;
+  -webkit-user-select: none;
+}
