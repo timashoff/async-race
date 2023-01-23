@@ -6,6 +6,6 @@ import { createCars } from './cars';
 export const createGarage = () => {
   const garage = document.createElement('div');
   garage.id = 'garage';
-  garage.append(createMenu(), createPageTitle('garage', 4), createPagination(1, 2), createCars());
+  garage.append(createMenu(), createPageTitle('garage', 4), createPagination(2, 3), createCars());
   return garage;
 };

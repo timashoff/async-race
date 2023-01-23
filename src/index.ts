@@ -5,6 +5,7 @@ import './css/style.css';
 import { createHeader } from './view/header';
 import { createFooter } from './view/footer';
 import { createGarage } from './view/garage';
+import { createWinners } from './view/winners';
 
 
 // const garagePage = document.getElementById('garage');
@@ -52,7 +53,7 @@ resetBtn?.addEventListener('click', () => {
 function App() {
   const body = document.body;
   const main = document.createElement('main');
-  main.append(createGarage());
+  main.append(createGarage(), createWinners());
   body.append(createHeader(), main, createFooter());
 }
 

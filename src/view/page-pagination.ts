@@ -3,6 +3,9 @@ import { createDiv } from '../utils/create-divs';
 
 export const createPagination = (firstPage: number, lastPage: number) => {
 
+  if (firstPage > lastPage) return '';
+  if (firstPage === 1 && lastPage === 1) return '';
+
   const pagination = createDiv('pagination');
 
   const prev = createBtn('prev');
